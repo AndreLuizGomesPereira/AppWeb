@@ -3,10 +3,14 @@ var main = function () {
     $(".comment-input button").on("click", function (event) {
         var $novoComentario;
 
-        if($(".comment-input input").val() !== ""){
-            $novoComentario = $("<p>").text($(".comment-input input").val());
-            $(".comments").append($novoComentario);
-        }
+
+            if ($(".comment-input input").val() !== "") {
+                $novoComentario = $("<p>").text($(".comment-input input").val());
+                $novoComentario.hide();
+                $(".comments").append($novoComentario);
+                $novoComentario.fadeIn();
+                $(".comment-input input").val("");
+            }
     });
 };
 $(document).ready(main);
