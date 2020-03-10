@@ -8,9 +8,11 @@ var main = function(){
     var $moreContent = $("<h3>Eu estou bem!</h3>").hide();
 
     $("body").append($content);
-    $content.slideDown(2000);
+    $content.slideDown(2000, function(){
+        $("body").append($moreContent);
+        $moreContent.fadeIn();
+    });
 
-    $("body").append($moreContent);
-    $moreContent.fadeIn(2000);
+
 }
 $(document).ready(main);
