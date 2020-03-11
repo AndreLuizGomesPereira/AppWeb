@@ -1,13 +1,14 @@
 var main = function(){
     "Uso restrito";
-    var tabNumber;
-    for(tabNumber = 1; tabNumber <=3; tabNumber++){
-        var tabSelector = ".tabs a:nth-child(" + tabNumber + ")span";
-        $(tabSelector).on("click", function (event) {
-            $(".tabs span").removeClass("active");
-            $(event.target).addClass("active");
-            return false;
+
+    $(".tabs span").toArray().forEach(function(element){
+        //cria um handler click para este elemento
+        $(element).on("click", function(){
+        $(".tabs span").removeClass("active");
+        $(element).addClass("active");
+        $("main .content").empty();
+        return false;
         });
-    }
+    });
 };
 $(document).ready(main);
