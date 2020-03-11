@@ -24,7 +24,7 @@ h1 {
   font-family: 'Ubuntu', sans-serif;
   font-style: italic;
   font-size: 3em;
-  color: #b33;
+  color: teal;
   float: left;
   width: 570px;
 }
@@ -42,7 +42,7 @@ header nav {
 }
 
 a {
-  color: #f00;
+  color: darkslategray;
   text-decoration: none;
   font-weight: bold;
 }
@@ -92,7 +92,7 @@ main .content button {
 
 
 main .content p {
-    background: yellow;
+    background: yellowgreen;
 }
 
 main .content input {
@@ -110,8 +110,8 @@ footer .contact {
 }
 
 footer .contact p:nth-child(2) {
-  color: #b33;
-  font-style: italic;
+  color:black;
+  font-style: oblique;
 }
 
 footer .sitemap {
