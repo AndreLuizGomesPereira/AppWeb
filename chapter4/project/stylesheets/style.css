@@ -1,4 +1,111 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+body {
+    background: #f9e933;
+    font-family: 'Ubuntu Condensed', sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: rgb(5, 5, 68);
+  }
+  
+  header,
+  main,
+  footer {
+    min-width: 855px;
+  }
+  
+  header .container,
+  main .container,
+  footer .container {
+    max-width: 855px;
+    margin: auto;
+  }
+  
+  header {
+    background: white;
+    overflow: auto;
+    padding: 25px;
+    border-bottom: black solid 0.02px;
+  }
+  
+  header h1 {
+    font-family: 'Bangers', cursive;
+    float: left;
+    font-size: 50px;
+    width: 570px;
+    margin: 0.8px;
+  }
+  
+  header nav {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    float: right;
+    width: 250px;
+  }
+  
+  main {
+    background: white;
+    overflow: auto;
+    padding: 15px;
+  }
+  
+  main h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+  }
+  
+  main h3 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+  }
+  
+  main .left {
+    float: left;
+    width: 570px;
+  }
+  
+  main .right {
+    float: right;
+    width: 285px;
+  }
+  
+  main p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 25px;
+  
+  }
+  
+  main ul {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 28px;
+  }
+  
+  footer h5 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    margin: 3px 0 5px;
+  }
+  
+  footer .left {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    float: left;
+    width: 570px;
+  }
+  
+  footer .sitemap {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    float: right;
+    width: 285px;
+  }
+  .tabs a span{
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    width: 100px;
+    margin-right: 10px;
+    text-align: center;
+    background: #ddd;
+    padding: 5px;
+  }
