@@ -1,12 +1,27 @@
 var main = function () {
-    //getJSON efetua ateé o mesmo parse do JSON para nós, portanto não é necessário chamar JSON.parse
+
     $.getJSON("cards/aceOfSpades.json", function (card) {
         //cria um elemento para armazenar a carta
         var $cardParagraph = $("<p>");
-        //adiciona texto ao elemento paragrafo
+
+        //cria o texto da carta
         $cardParagraph.text(card.rank + "of" + card.suit);
-        //aidiciona o paragrafo da carta ao main
-        $(main).append($cardParagraph);
+
+        //adiciona o paragrafo da carta ao main
+        $("main").append($cardParagraph);
+    });
+    $.getJSON("cards/hand.json", function(hand){
+        var $list = $("<ul>");
+
+        //hand é um array, portanto é possivel iterar pelos seus elementos usando um laço forEach
+        hand.forEach(function(card){
+            //cria um item de lista para armazenar a carta e insere na lista
+            var $card = $("<li>");
+            $card.text(card.rank + "of" + card.suit);
+            $list.append($card);
+        });
+        //adiciona a lista ao main
+        $("main").append($list);
     });
 };
 $(document).ready(main);
