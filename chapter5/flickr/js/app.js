@@ -5,8 +5,15 @@ var main = function (){
 
     $.getJSON(url, function(flickrResponse){
         flickrResponse.items.forEach(function (photo){
-            console.log(photo.media.m);
-        })
+            //cria um novo elemento jQuery oara armazenar a imagem
+            var $img = $("<img>");
+            
+            //define o atributo usando url contido na resposta
+            $img.attr("src", photo.media.m);
+
+            //associa a tag img ao elemento main photos
+            $("main.photos").append($img);
+        });
     });
 };
 $(document).ready(main);
